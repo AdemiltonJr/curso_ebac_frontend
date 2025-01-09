@@ -74,7 +74,7 @@ body {
         }
     }
     
-    @media screen and (max-width: variaveis.$tablet) {
+    @media screen and (max-width: #{variaveis.$tablet}) {
         .container {
             max-width: 80%;
         }
@@ -84,7 +84,7 @@ body {
         }
     }
     
-    @media screen and (max-width: variaveis.$mobile) {
+    @media screen and (max-width: #{variaveis.$mobile}) {
         .products {
             display: block;
     
@@ -95,3 +95,6 @@ body {
     }
 }
 
+.test-media {
+    content: variaveis.$tablet; // Deve exibir 768px no CSS compilado
+}
