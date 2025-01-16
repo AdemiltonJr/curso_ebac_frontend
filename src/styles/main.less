@@ -1,0 +1,34 @@
+@base-color: gray;
+@highlight-border: gold;
+@highlight-bg: #ffff42;
+@font-size-nome: 1.2em;
+
+.produtos {
+    max-width: 640px;
+    width: 100%;
+    margin: 56px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1%;
+
+    &__item { // Elemento
+        &--destaque { // Modificador
+            border: 2px solid @highlight-border;
+            padding: 8px;
+            background-color: @highlight-bg;
+        }
+    }
+
+    &__imagem { // Elemento
+        width: 100%;
+    }
+
+    &__nome { // Elemento
+        font-size: @font-size-nome;
+        margin: 8px 0;
+    }
+
+    &__descricao { // Elemento
+        color: @base-color;
+    }
+}
